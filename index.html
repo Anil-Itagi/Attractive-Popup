@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .popup {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            box-shadow: 10px 10px 20px 10px rgba(10, 1, 1, 0.2);
+            visibility: hidden;
+            transition: transform 0.5s, top 0.5s;
+        }
+        
+        .open-popup {
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .popup i {
+            width: 120px;
+            margin-top: -50%;
+            border-radius: 50%;
+            height: 120px;
+            box-shadow: 10px 10px 20px 10px rgba(10, 1, 1, 0.2);
+            font-size: 60px;
+            background-color: #6fd649;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .popup h2 {
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+        
+        .popup button {
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            color: #fff;
+            background-color: #6fd649;
+            border: 0;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        #hi1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+            height: 800px;
+            width: 100%;
+        }
+        
+        .btn {
+            background-color: red;
+            height: 40px;
+            width: 30%;
+            color: white;
+            border-radius: 4%;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="hi1">
+            <button type="" class="btn" onclick="open1()">submit
+            </button>
+        </div>
+        <div class="popup" id="popup">
+
+            <h2>Thank you</h2>
+            <p>Your details has been successfully submited .Thanks !</p>
+            <button type="button" id="hi" onclick="close1()">OK</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    let popup = document.getElementById('popup');
+
+    function open1() {
+        popup.classList.add("open-popup");
+    }
+
+    function close1() {
+        popup.classList.remove("open-popup");
+    }
+</script>
+
+</html>
+
+</html>
